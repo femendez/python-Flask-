@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block  body %}
+<div class="grid--column" style="float: left;">........</div>
+<div class="grid--column" style="float: left;">........</div>
+<form action="/seek_user" method="POST">
+    <div class="grid--column" style=" padding:6px 6px; box-shadow: 3px 3px 3px 3px blue; border-radius: 8px;">
+        <label for="" class="form-label borde" style="text-align: center; color: red; font-weight: bold;">Ingreso de Usuarios</label>
+        <label for="txt_user" class="form-label borde" style="text-align: center;">Usuario</label>
+        <input type="text" class="form-control borde-input" name="txt_user" id="txt_user" >
+        <br>
+        <label for="txt_pass" class="form-label borde" style="text-align: center;">Password</label>
+        <input type="password" class="form-control borde-input" name="txt_pass" id="txt_pass" >
+        <div>
+            <br>
+            <button type="submit" class="button--submit" >Aceptar</button>
+            
+        </div>
+    </div>
+    
+</form>
+<br>
+<div class="grid--column" style="float: left;">........</div>
+<div class="grid--column" style="float: left; ">........</div>
+<a href="/new_user">
+    <button class="button--submit">Registro Usuario</button>
+</a>
+
+{% endblock  %}

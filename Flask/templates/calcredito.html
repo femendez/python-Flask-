@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block  body %}
+
+<form action="/ccredito" method="POST, GET">
+    <label for="imp_credito" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Importe Credito</label>
+    <input type="number" class="form-control borde-input" name="imp_credito" id="imp_credito">
+    <label for="imp_tasa" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Tasa</label>
+    <input type="number" class="form-control borde-input" name="imp_tasa" id="imp_tasa">
+    <label for="imp_iva" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">IVA</label>
+    <input type="number" class="form-control borde-input" name="imp_iva" id="imp_iva">
+    
+    <label for="ipago" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Forma de Pago</label>
+    <select name="ipago" id="ipago" style="color: black;">
+            <option value=12 style="color: black;">Mensual</option>
+            <option value=6 style="color: black;">Bimensual</option>
+            <option value=4 style="color: black;">Trimestral</option>
+            <option value=3 style="color: black;">Cuatrimensual</option>
+            <option value=2 style="color: black;">Semenstral</option>
+            <option value=1 style="color: black;">Anual</option>
+    </select>
+    <br> <br>
+    <label for="ifinanc" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Tipo de financiamiento</label>
+    <select name="ifinanc" id="ifinanc"  style="color: black; ; border-radius: 8px ; border: 1px solid black;" >
+        {% for rdors in rdos %}
+            <option value="{{ rdors.0}}" style="color: black; border-radius: 8px ; border: 1px solid black;" >{{rdors.0}} </option>
+        {% endfor %}
+    </select>
+    
+    <button type="submit" class="button--submit">Aceptar</button>
+</form>continua
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="col-md-9 offset-md6">
+
+
+<table class="table table-striped table-bordered bg-red table-sm">
+    <thead>
+        <tr>
+            <th>Descripción</th>
+            <th>Tipo Presentacion</th>
+            <th>Inventario</th>
+            <th>Cantidad</th>
+            <th>Codigo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <form action="/add_pedido1/{{pedido.0}}">
+            {% for producto in pedido %}
+                <tr>
+            
+                    <td>  {{ producto.1}}    </td>
+                    <td>{{ producto.5}}</td>
+                    <td>{{ producto.3}}</td>
+                    <td >
+                        <input  type="text" style="width : 80px; heigth : 1px" name="txt_pedido" placeholder="Pedido"  class="form-control"> 
+                    </td>
+                    <td>  
+                        <a href="/add_pedido1/" class="btn btn-danger">Comprar</a>
+                    </td>    
+                </tr>
+
+            {% endfor%}
+            </form>
+    </tbody>
+
+</table>
+
+</div>
+{% endblock %}

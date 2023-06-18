@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block  body %}
+<div class="grid--column" style="float: left;">........</div>
+<div class="grid--column" style="float: left; ">........</div>
+<form action="/add_contacto" method="POST">    
+    <div class="grid--column" style=" padding:6px 6px; box-shadow: 3px 3px 3px 3px rgb(214, 68, 207); border-radius: 8px;">
+        <label for="txt_name" class="form-label borde" style="text-align: center; color: rgb(255, 0, 0); ">Registro de Usuarios</label>
+        <label for="txt_name" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0); ">Usuario</label>
+        <input type="text" class="form-control borde-input " name="txt_name" id="txt_name">
+        <label for="txt_email" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0); ">email</label>
+        <input type="email" class="form-control borde-input" name="txt_email" id="txt_email">
+        <label for="txt_cel" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Teléfono</label>
+        <input type="number" class="form-control borde-input" name="txt_cel" id="txt_cel">
+        <label for="txt_pass" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Password</label>
+        <input type="password" class="form-control borde-input" name="txt_pass" id="txt_pass">
+        <label for="txt_dir" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Dirección</label>
+        <input type="text" class="form-control borde-input" name="txt_dir" id="txt_dir">
+        <!--label for="txt_sexo" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">Sexo</label-->
+        <label for="txt_sexo" class="form-label borde" style="text-align: center; color: rgb(0, 0, 0);">txt_sexo</label>
+        <input type="text" class="form-control borde-input" name="txt_sexo" id="txt_sexo" list="scripts">
+        <datalist id="scripts">
+            <option value="Masculino">
+            <option value="Femenino">
+            <option value="Transgenero">
+        </datalist>    
+        <!--select name="txt_sexo" id="txt_sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select-->
+        <br>
+        <button type="submit" class="button--submit" >Grabar</button>
+    </div>
+        
+</form>
+   
+{% endblock  %}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-AU-Compatible" content="ie=edge">
+  <title>Contacto</title>
+  <style>
+    *{
+      margin: 0px;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 0px;
+      color: rgb(255, 255, 255);
+    }
+    .nav{
+      list-style-type: none;
+      float: left;
+      margin: 2px 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 5px rgb(34, 139, 209);
+    }
+    .nav:hover {
+      color:  rgb(17, 0, 114);
+      background-color: rgb(112, 204, 103);
+    }
+
+    .nav:active {
+      transition: 0.5s;
+      box-shadow: 0px 0px 0px;
+    }
+   .borde-color {
+      padding: 0px 0px 33px;
+      background-color: rgb(9, 116, 32);
+      
+   }
+   .borde-input{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px ; 
+    box-shadow: 3px 3px 3px rgb(195, 212, 223);
+    font-weight: normal; 
+    color:black 
+   }
+   .borde{
+      color: black;
+      font-weight: normal;
+   }
+   .button--submit {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 10px;
+      background-color:   rgb(29, 114, 17);
+      box-shadow: 5px 5px 5px rgb(94, 87, 93);
+      cursor: pointer;
+   }
+   .button--submit :active {
+      box-shadow: 0px 0px 0px;
+      transition: 0.5s;
+   }
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+   .grid--column{
+      
+      display: grid;
+      width: 250px;
+      left: 200px;    
+      /*padding:6px 6px; 
+      box-shadow: 3px 3px 3px 3px rgb(129, 125, 129); 
+      border-radius: 8px;
+*/
+   }
+   .grid--column1{
+      
+      display: grid;
+      width: 450px;
+      left: 200px;    
+   }
+  </style>
+</head>
+<body>
+  <div class="borde-color">
+    
+    <ul style="list-style-type: none;">
+      <li><a  href="/" class="nav">Inicio</a></li>
+      <li><a  href="/" class="nav">Productos</a></li>
+      <li><a  href="/users" class="nav">Usuarios</a></li>
+      <li><a  href="/" class="nav">Acerca de</a></li>
+      <li><a  href="/credito" class="nav">Calculador de Credito</a></li>
+    </ul>
+  </div>
+  <br><br>
+  
+        {%block body%}
+        
+        {% endblock %}
+    
+</body>
+
+</html>

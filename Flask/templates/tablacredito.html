@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block  body %}
+    <!--label for="" style="color: black;"> id persona     {{rdos.0.0}} </label-->
+    
+    <label for="" style="color: rgb(221, 8, 8);"> cuota Fija= $ {{rdos.0.2}} </label> <br>
+    <label for="" style="color: rgb(221, 8, 8);"> Saldo Inicial = $ {{rdos.0.4}} </label>
+    <br><br>
+    
+    <div style="width: 120px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Amortizacion</div>
+    <div style="width: 100px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Interes</div>
+    <div style="width: 120px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Saldo</div>
+    <div style="width: 120px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Imp Credito</div>
+    <div style="width: 120px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Interes Credito</div>
+    <div style="width: 120px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Imp IVA</div>
+    <div style="width: 120px; box-shadow: 5px 5px 5px saddlebrown; color: rgb(5, 17, 88); text-align: center; float: left;">Interes IVA</div>
+    <br><br>
+    <div  style="width: 120px;  color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}     
+            {{rdors.2}}  
+            <br>          
+        {% endfor%}
+    </div>
+    <div style="width: 100px; color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}
+            {{rdors.3}}  
+            <br>          
+        {% endfor %}
+    </div>
+    <div style="width: 120px;color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}
+            {{rdors.4}}  
+            <br>          
+        {% endfor%}
+    </div>
+    <div style="width: 120px;color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}
+            {{rdors.8}}  
+            <br>          
+        {% endfor%}
+    </div>
+    <div style="width: 120px;color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}
+            {{rdors.7}}  
+            <br>          
+        {% endfor%}
+    </div>
+    <div style="width: 120px;color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}
+            {{rdors.5}}  
+            <br>          
+        {% endfor%}
+    </div>
+    <div style="width: 120px;color: black; text-align: right; float: left;">
+        {% for rdors in rdos %}
+            {{rdors.6}}  
+            <br>          
+        {% endfor%}
+    </div>
+{% endblock%}
